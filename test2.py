@@ -1,0 +1,1 @@
+print("motto test 2")
