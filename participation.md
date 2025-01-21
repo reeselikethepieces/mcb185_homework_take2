@@ -1,4 +1,3 @@
-======
 Points
 ======
  - Attended class on Tuesday
