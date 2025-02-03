@@ -29,3 +29,23 @@ Week 2
 
 Week 3
 ------
+ - Attended class on Tuesday
+ - Asked a question in class
+ - Helped student behind me (forgot name)
+ - Attended class on Thursday
+ - Helped Ryan with max examples
+ - 5 points total 
+ 
+Week 4
+------
+ - Attended class on Tuesday
+ - Spoke up in class for () error
+ - Gave the professor's jacket when left behind
+ - Attended class on Thursday
+ - Worked with Ryan on practice assessments
+ - 5 points total
+ 
+Week 5
+------
+ - Attended coderie with Seheil
+ 
