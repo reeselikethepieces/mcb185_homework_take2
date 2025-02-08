@@ -47,5 +47,11 @@ Week 4
  
 Week 5
 ------
- - Attended coderie with Seheil
+ - Attended coderie with Seheild
+ - Attended class on Tuesday
+ - Went to office hours, twice
+ - Attended class on Thursday
+ - Asked several questions in class
+ - 5 points total
+
  
