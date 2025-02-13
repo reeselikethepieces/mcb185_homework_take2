@@ -94,3 +94,24 @@ for i in range(len(basket)):
 for i in range(7):
 	if i % 2 == 0: print(i, 'is even')
 	else:          print(i, 'is odd')
+	
+
+# random numbers
+import random
+
+for i in range(5):
+	print(random.random())         # 0<= x < 1 
+
+for i in range(3):
+	print(random.randint(1, 6))    # inclusive end point1 < x < inclusive end point2
+
+# seed = an integer used for random numbers, making them not truly random
+random.seed(1)
+print(random.random())
+print(random.random())
+random.seed(2)
+print(random.random())
+print(random.random())
+random.seed(1)                     # same exact numbers bc nums are s/s for seed(1)
+print(random.random())
+print(random.random())
