@@ -54,4 +54,15 @@ Week 5
  - Asked several questions in class
  - 5 points total
 
+Week 6
+------
+ - Attended class on Tuesday
+ - Attended class on Thursday
+ - Asked questions in class
+ - Got help when stuck
+ - 4 points total
+
+Week 7
+------
+
  
