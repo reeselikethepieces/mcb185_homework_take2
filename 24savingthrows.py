@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # event 'x' occurs --> saving throw = roll d20 (20 sides) 
 #                  --> result: success or not
 # event 'x' comes in different difficulty flavors, 'DC'
