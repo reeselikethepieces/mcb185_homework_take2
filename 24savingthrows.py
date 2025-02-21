@@ -106,11 +106,3 @@ for rolls in range(trials):
 		if roll >= dc: success += 1
 		
 print(success/total)
-
-
-	
-
-	
-	
-
->>>>>>> f2ee6cfda96576b0608adaf0b3bc64afe8cca74d
