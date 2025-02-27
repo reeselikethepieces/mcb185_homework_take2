@@ -24,13 +24,16 @@ revi = 0
 for i in range(trials):
 	succ = 0
 	fail = 0
-	for j in range(5):
+	r20 = False
+	while succ < 3 and fail < 3 and not r20:
 		roll = random.randint(1, 20)
-		if roll == 20: revi += 1
 		if roll == 1: fail += 2
-		if roll >= 10: succ += 1
-		if roll < 10: fail += 1
+		elif roll == 20: r20 = True
+		elif roll < 10: fail += 1
+		elif roll >= 10: succ += 1
 	if fail >= 3: dies += 1
 	if succ >= 3: stab += 1
-	
+	if r20: revi += 1 
+
 print(dies/trials, stab/trials, revi/trials)
+print(dies/trials + stab/trials + revi/trials)
