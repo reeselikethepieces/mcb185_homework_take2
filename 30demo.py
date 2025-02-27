@@ -140,6 +140,113 @@ nts = 'ACGT'
 for i, nt in enumerate(nts):
 	print(i, nts)
 
+# what we know thus far
 names = ('adenine', 'cytosine', 'guanine', 'thymine')
+'''
 for i in range(len(names)):
 	print(nts[i], names[i])
+'''
+	
+# instead of above, can do zip():
+for nt, name in zip(nts, names):
+	print(nt, name)
+
+# additionally, you can enumerate the zip 
+# unpacking tuples in series using additional ()
+for i, (nt, name) in enumerate(zip(nts, names)):
+	print(i, nt, name)
+
+
+
+
+# Lists - similar to tuples, but use [] instead of ()
+	# elements can be added to the end of lists via list.append()
+	# elements can be removed from end of lists via list.pop()
+	# like strings, most operations use method syntax
+	# lists are sorted with list.sort() 
+		# note: elements in the list must have similar types
+			# you can mix ints and flots
+			# you cannot mix them with strings
+
+nts = ['A', 'T', 'C']
+nts[2] = 'G'
+nts.append('C')
+print(nts)
+
+last = nts.pop()
+print(last)
+print(nts)
+
+nts.sort()
+print(nts)
+nts.sort(reverse=True)
+print(nts)
+
+# if you make a new variable to an existing list, it is not a copy
+	# is another name for the same list
+	# below, nucleotides is modified AND nts
+		# this is bc both variable names = same underlying data
+
+nucleotides = nts
+nucleotides.append('C')
+nucleotides.sort()
+print(nts, nucleotides)
+
+# to make a copy, use list.copy() = 'shallow' copy 
+	# means x-dmsnal lists and other complex data are not fully copied
+	# we do not make deep copies in this class
+
+# list() fxn without arguments creates empty lists
+items = list()
+print(items)
+items.append('eggs')
+print(items)
+
+# instead of list(), you can also just use empty []
+stuff = []
+stuff.append(3)
+print(stuff)
+
+# the list() fxn coerces other 'iterables' into lists
+# below is an ex of turning strings into list of letters
+alph = 'ACDEFGHIKLMPQRSVW'
+print(alph)
+aas = list(alph)
+print(aas)
+
+# split() and join()
+	# str.split() method splits strings into lists of strings
+text = 'good day      to you'
+words = text.split()
+print(words)
+
+# TSV or CSV data, split on \t or comma
+line = '1.41,2.72,3.14'
+print(line.split(','))
+
+# lists can be turned into strings by joining them with delimiter
+	# below the list is an argument to a method owned by delim string
+s = '-'.join(aas)
+print(s)
+s = ''.join(aas)
+print(s)
+
+
+
+
+# searching
+	# to search for items in containers, you can use:
+		# in --> reads well in conditionals (i.e. if 'str' in blah:)
+			# if ur unsure if an element is in a list, use 'in'
+				# i.e. if thing in list: idx = list.index(thing)
+		# find() --> returns index of first element it finds
+			# if not found, -1 is returned
+		# index() --> returns index of first element it finds
+			# if not found, an error is returned
+
+print('index G?', alph.index('G'))
+# print('index Z?', alph.index('Z'))
+
+print('find G?', alph.find('G'))
+print('find Z?', alph.find('Z'))
+
