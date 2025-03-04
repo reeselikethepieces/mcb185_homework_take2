@@ -28,7 +28,7 @@ print('hey "dude" don\'t tell me what to do')
 		# s.endswith(s1) --> true if s ends with s1
 		# s.startswith(s1) --> true if s starts with s1
 		# s.upper() or s.lower() --> uppercase or lowercase version of s
-		# r.rstrip() --> strip characters from the right (spaces by default)
+		# s.rstrip() --> strip characters from the right (spaces by default)
 		# s.replace(a, b) --> convert substring a to b
 	
 print(s.upper())
@@ -91,7 +91,7 @@ for i in range(len(seq)):
 	# can also have a step size like 3rd parameter in range(), i.e. [::]
 	# s, below, is equivalent to
 		# s[0:len(s)] and s[::], explicitly or implicitly set the bounds
-			# of the spliace to the whole string
+			# of the splice to the whole string
 		# s[::1] is s/s as above; but s[::-1] needs a closer look
 
 s = 'ABCDEFGHIJ'   # below two prints have no step size
@@ -250,3 +250,70 @@ print('index G?', alph.index('G'))
 print('find G?', alph.find('G'))
 print('find Z?', alph.find('Z'))
 
+
+
+
+# Command line data
+	# when we run 'grep', we don't have to re-write grep with different strings
+	# 'grep' reads the command line and operates on various values
+		# programs can do this, too
+
+# sys.argv = complete list of words on command line (argv = argu vector)
+	# sys.argv[0] = name of program
+	# sys.argv[1] = first argument, if there is one
+
+import sys
+print(sys.argv)
+# the output shows: ['30demo.py', '3.14', '2.71']
+	# this makes sense bc sys.argv IS a list, which we know are inside []
+	# the numeric values we entered have '' around them bc they are strings
+
+# Converting types
+	# one must convert text of numbers to ints and floats BEFORE maths
+	# int() and float() fxns do this
+
+i = int('42')
+x = float('0.61803')
+print(i * x)
+sys.exit('hello')
+	# we do not learn assert, try, except, or raise in this course
+
+
+
+
+
+# Pairwise Comparison
+	# given a list, a freq operation is to compare all things to each other
+		# i.e. list of cities, compare distances to each other
+		# i.e. list of proteins, compare which are similar to each other
+		# i.e. given list of aas, give an alignment score when paired to each other
+	# three ways to do all vs all comparisons:
+		# (1) all combinations
+		# (2) unique pairing allowing self-comparisons
+			# aka, half matrix + diagonal
+		# (3) unique pairing disallowing self-comparisons
+			# aka half matrix - diagonal
+	# given ACGT, there are 2**4 combinations; however, some are s/s
+		# i.e AC is s/s to CA, in appropriate context
+		# same ex but with different context:
+			# first letter = host for dinner party
+			# second letter = guest 
+			# in this case, AC != CA, in either direction
+'''
+for i in range(0, len(list)):
+	for j in range(X, len(list)):
+'''
+
+'''
+# all combinations
+for i in range(0, len(list)):
+	for j in range(0, len(list)):
+
+# half-matrix + diagonal
+for i in range(0, len(list)):
+	for j in range(i, len(list)):
+
+# half-matrix - diagonal
+for i in range(0, len(list)):
+	for j in range(x+i len(list)):
+'''
