@@ -12,23 +12,23 @@ for arg in sys.argv[1:]:
 	vals.append(f)
 
 total = 0
-mean = 1
 for val in vals: 
 	total += val 
-	mean = total/len(vals)
+mean = total/len(vals)
 
-sd = 1
+vari = 0
 for val in vals:
-	sd = (val - mean)**2 / len(vals)
-	
-'''
-medi = 1
-for val in vals:
-	if len(val) / 2: (len(val)/2 + val/(2+1))/2
-	else: val+1/2
+	vari += (val - mean)**2 / len(vals)
+sd = (vari)**2
 
-# alternatively, vals.sort/2
-'''
+# median
+vals.sort()
+print(vals)
+
+median = None
+n = len(vals)
+if n % 2 != 0: median = (vals[n // 2])
+else: median = ((vals[n // 2] + vals[n // 2 - 1])/2)
 
 
-print(len(vals), min(vals), max(vals), mean, sd)
+print(len(vals), min(vals), max(vals), mean, sd, median)
