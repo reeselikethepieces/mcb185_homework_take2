@@ -8,14 +8,16 @@ import random
 import sys
 
 trials = int(sys.argv[1])
-# days = int(sys.argv[2]) was not used
+days = int(sys.argv[2])
 people = int(sys.argv[3])
-
 shared = 0
+
 for t in range(trials):
 	bdays = []
+	
 	for i in range(people):
-		bday = random.randint(0, 364)
+		bday = random.randint(0, days-1)
+		
 		if bday in bdays:
 			shared += 1
 			break
