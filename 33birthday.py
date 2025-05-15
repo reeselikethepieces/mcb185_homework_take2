@@ -14,7 +14,7 @@ shared = 0
 
 for t in range(trials):
 	bdays = []
-	
+
 	for i in range(people):
 		bday = random.randint(0, days-1)
 		
@@ -23,6 +23,6 @@ for t in range(trials):
 			break
 		bdays.append(bday)
 		
-print(shared/trials)
+print(bdays, shared/trials)
 		
 	
